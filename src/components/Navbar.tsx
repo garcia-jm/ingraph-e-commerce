@@ -92,6 +92,7 @@ const Navbar = () => {
       paddingX={{ base: "1rem", md: "2rem", lg: "6rem" }}
     >
       <Img
+        draggable="false"
         cursor="pointer"
         src={logo}
         width={{ base: "100px", md: "110px", lg: "135px" }}

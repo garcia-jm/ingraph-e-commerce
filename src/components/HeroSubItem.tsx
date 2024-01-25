@@ -23,6 +23,7 @@ const HeroSubItem = ({ img, title }: Props) => {
   return (
     <Box overflow="hidden" cursor="pointer" height="100%" position="relative">
       <Img
+        draggable="false"
         src={img}
         alt="best seller"
         height="100%"

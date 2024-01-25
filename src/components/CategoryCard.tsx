@@ -18,6 +18,7 @@ const CategoryCard = ({ title, imgUrl }: Props) => {
       <CardBody padding={{ base: "0", md: "2" }}>
         <Box position="relative" width="100%" height="0" pb="80%">
           <Image
+            draggable="false"
             position="absolute"
             width="100%"
             height="100%"

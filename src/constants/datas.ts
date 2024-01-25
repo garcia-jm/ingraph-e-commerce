@@ -1,6 +1,6 @@
 import images from "./images";
 
-const data = [
+const heroItems = [
   {
     title: "Get perfect prints delivered to your business",
     desc: "Make your business stand out from the crowd with our professional and eye-catching signs and prints.",
@@ -74,4 +74,22 @@ const categories = [
   },
 ];
 
-export default { data, categories };
+const carouselItems = [
+  {
+    title: "Easy online ordering",
+    desc: "Our online tools make the process as simple and clear as possible, and we're working to improve your experience all the time.",
+    imgUrl: images.carouselImage1,
+  },
+  {
+    title: "We ship and delivery",
+    desc: "We offer shipping and delivery across Calgary.",
+    imgUrl: images.carouselImage2,
+  },
+  {
+    title: "Satisfaction guaranteed",
+    desc: "Our commitment is to provide you with exceptional quality and we will continuously work hard to ensure your satisfaction.",
+    imgUrl: images.carouselImage3,
+  },
+];
+
+export default { heroItems, categories, carouselItems };

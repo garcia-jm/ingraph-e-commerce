@@ -15,6 +15,9 @@ import marketingMaterials from "../assets/marketing-materials.jpg";
 import galleryWrap2 from "../assets/gallery-wrap-2.jpg";
 import posters2 from "../assets/posters.jpg";
 import apparels from "../assets/apparels.jpg";
+import carouselImage1 from "../assets/saleswoman-working-on-a-laptop.webp";
+import carouselImage2 from "../assets/cropped-photo-of-businesswoman.webp";
+import carouselImage3 from "../assets/satisfaction-guaranteed.webp";
 
 export default {
   constructionHoardingSign,
@@ -34,4 +37,7 @@ export default {
   galleryWrap2,
   posters2,
   apparels,
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
 };

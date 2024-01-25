@@ -1,18 +1,16 @@
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Jumbotron from "../components/Jumbotron";
-import Categories from "../components/Categories";
-import CTA from "../components/CTA";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { Flex } from "@chakra-ui/react";
-const carouselItems = [
-  "https://placekitten.com/600/300",
-  "https://placekitten.com/601/300",
-  "https://placekitten.com/602/300",
-];
+import {
+  Categories,
+  FAQ,
+  Features,
+  Footer,
+  Header,
+  Hero,
+  Jumbotron,
+  Navbar,
+} from "../components";
+import CTA from "../components/CTA";
+
 const Home = () => {
   return (
     <div>
@@ -28,7 +26,7 @@ const Home = () => {
       </Flex>
       <Jumbotron />
       <Categories />
-      <CTA imgUrl={carouselItems} />
+      <CTA />
       <FAQ />
       <Footer />
     </div>

@@ -13,20 +13,23 @@ interface Props {
   interval?: number;
 }
 
-const HeroMainItem = ({ interval = 10000 }: Props) => {
+const HeroMainItem = ({ interval = 10_000 }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentService, setCurrentService] = useState(data.data[currentIndex]);
+  const [currentService, setCurrentService] = useState(
+    data.heroItems[currentIndex]
+  );
   const [change, setChange] = useState(false);
 
   const goToNext = () => {
     if (!change) {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.data.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.heroItems.length);
     }
   };
   const goToPrev = () => {
     if (!change) {
       setCurrentIndex(
-        (prevIndex) => (prevIndex - 1 + data.data.length) % data.data.length
+        (prevIndex) =>
+          (prevIndex - 1 + data.heroItems.length) % data.heroItems.length
       );
     }
   };
@@ -37,7 +40,7 @@ const HeroMainItem = ({ interval = 10000 }: Props) => {
     setChange(!change);
     setTimeout(() => {
       setChange(false);
-      setCurrentService(data.data[currentIndex]);
+      setCurrentService(data.heroItems[currentIndex]);
     }, 2000);
 
     return () => clearInterval(intervalId);
