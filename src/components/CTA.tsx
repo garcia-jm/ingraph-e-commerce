@@ -1,6 +1,6 @@
-import { Box, Flex, IconButton } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+// import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 interface Props {
   imgUrl: string[];
@@ -9,11 +9,11 @@ interface Props {
 
 const CTA = ({ imgUrl, interval = 3000 }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + imgUrl.length) % imgUrl.length
-    );
-  };
+  // const goToPrev = () => {
+  //   setCurrentIndex(
+  //     (prevIndex) => (prevIndex - 1 + imgUrl.length) % imgUrl.length
+  //   );
+  // };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % imgUrl.length);
