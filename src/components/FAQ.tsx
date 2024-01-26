@@ -11,11 +11,7 @@ import {
 
 const FAQ = () => {
   return (
-    <Accordion
-      mb="3rem"
-      px={{ base: "1rem", md: "2rem", lg: "6rem" }}
-      allowToggle
-    >
+    <Accordion px={{ base: "1rem", md: "2rem", lg: "6rem" }} allowToggle>
       <Heading as="h2" mb="2rem">
         FAQ's
       </Heading>

@@ -14,20 +14,27 @@ const Features = () => {
     lg: "lg",
     xl: "xl",
   });
+
+  const headingStyles = {
+    fontSize: { base: "0.9em", lg: "1em", "2xl": "1.5em" },
+  };
+
+  const textStyles = {
+    fontSize: { base: "0.7em", lg: "0.8em", "2xl": "1.2em" },
+  };
   return (
     <Flex
-      px={{ base: "1rem", lg: "6rem" }}
+      paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
       justifyContent="space-between"
+      alignItems={{ base: "flex-start", md: "center" }}
       direction={{ base: "column", md: "row" }}
       gap="1rem"
-      pb="2rem"
-      mb="2rem"
     >
       <Box>
-        <Heading as="h6" fontSize={{ lg: "1em" }}>
+        <Heading as="h6" sx={headingStyles}>
           High-quality prints
         </Heading>
-        <Text fontSize={{ lg: "0.8em" }}>Perfect prints. Guaranteed.</Text>
+        <Text sx={textStyles}>Perfect prints. Guaranteed.</Text>
       </Box>
       {breakpoint === "base" ? (
         <Divider orientation="horizontal" />
@@ -35,10 +42,10 @@ const Features = () => {
         <Divider orientation="vertical" />
       )}
       <Box>
-        <Heading as="h6" fontSize={{ lg: "1em" }}>
+        <Heading as="h6" sx={headingStyles}>
           Next Day Delivery
         </Heading>
-        <Text fontSize={{ lg: "0.8em" }}>Delivers anywhere in Calgary.</Text>
+        <Text sx={textStyles}>Delivers anywhere in Calgary.</Text>
       </Box>
       {breakpoint === "base" ? (
         <Divider orientation="horizontal" />
@@ -46,12 +53,10 @@ const Features = () => {
         <Divider orientation="vertical" />
       )}
       <Box>
-        <Heading as="h6" fontSize={{ lg: "1em" }}>
+        <Heading as="h6" sx={headingStyles}>
           Satisfaction Guaranteed
         </Heading>
-        <Text fontSize={{ lg: "0.8em" }}>
-          Not satisfied? Get a full refund.
-        </Text>
+        <Text sx={textStyles}>Not satisfied? Get a full refund.</Text>
       </Box>
       {breakpoint === "base" ? (
         <Divider orientation="horizontal" />
@@ -59,10 +64,10 @@ const Features = () => {
         <Divider orientation="vertical" />
       )}
       <Box>
-        <Heading as="h6" fontSize={{ lg: "1em" }}>
+        <Heading as="h6" sx={headingStyles}>
           Fast and Easy
         </Heading>
-        <Text fontSize={{ lg: "0.8em" }}>Process everything online.</Text>
+        <Text sx={textStyles}>Process everything online.</Text>
       </Box>
     </Flex>
   );

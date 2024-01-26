@@ -13,23 +13,17 @@ import CTA from "../components/CTA";
 
 const Home = () => {
   return (
-    <div>
-      <Flex
-        height={{ base: "auto", md: "100vh" }}
-        gap="1.2rem"
-        direction="column"
-      >
-        <Header />
-        <Navbar />
-        <Hero />
-        <Features />
-      </Flex>
+    <Flex direction="column" gap={{ base: "2rem", "2xl": "4rem" }}>
+      <Header />
+      <Navbar />
+      <Hero />
+      <Features />
       <Jumbotron />
       <Categories />
       <CTA />
       <FAQ />
       <Footer />
-    </div>
+    </Flex>
   );
 };
 

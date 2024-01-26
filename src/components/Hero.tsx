@@ -6,10 +6,11 @@ import HeroMainItem from "./HeroMainItem";
 const Hero = () => {
   return (
     <Grid
+      border="2px solid green"
       zIndex="0"
       templateRows={{ base: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}
       templateColumns="repeat(12, 1fr)"
-      height="100%"
+      minHeight="70vh"
       gap="1px"
     >
       <GridItem rowSpan={2} colSpan={{ base: 12, md: 8 }}>

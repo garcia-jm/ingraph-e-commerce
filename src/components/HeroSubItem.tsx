@@ -5,15 +5,15 @@ interface Props {
 }
 
 const titleProps = {
-  bottom: "10px",
-  left: "10px",
+  bottom: "3%",
+  left: "3%",
   position: "absolute",
   zIndex: "100",
   direction: "column",
   width: { base: "50%", md: "60%" },
   fontFamily: "Arial",
   lineHeight: "115%",
-  fontSize: { base: "1.2em" },
+  fontSize: { base: "1.2em", "2xl": "2em" },
   color: "white",
   fontWeight: "bold",
   mb: "0.5rem",

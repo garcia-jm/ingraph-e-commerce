@@ -14,10 +14,15 @@ const Jumbotron = () => {
       rounded="25px"
       alignItems="center"
       justifyContent="center"
-      mb="2rem"
     >
       <Heading
-        fontSize={{ base: "1em", md: "1.5em", lg: "1.5em" }}
+        fontSize={{
+          base: "1em",
+          md: "1.5em",
+          lg: "1.5em",
+          xl: "2em",
+          "2xl": "3em",
+        }}
         color="#f2f2f2"
         textAlign="center"
       >

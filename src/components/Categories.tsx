@@ -3,21 +3,21 @@ import data from "../constants/datas";
 import CategoryCard from "./CategoryCard";
 const Categories = () => {
   return (
-    <Box mb="4rem">
+    <Box>
       <Heading
         textAlign="center"
         as="h2"
-        fontSize={{ base: "1.5em", md: "2em" }}
+        fontSize={{ base: "1.3em", md: "1.5em", xl: "2em", "2xl": "3em" }}
         mb="2rem"
       >
         Categories
       </Heading>
       <Flex
-        mx={{ base: "1rem", md: "" }}
+        paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
         alignItems="center"
         justifyContent="center"
         wrap="wrap"
-        gap="1rem"
+        gap={{ base: "1rem", "2xl": "2rem" }}
       >
         {data.categories.map((category) => (
           <CategoryCard

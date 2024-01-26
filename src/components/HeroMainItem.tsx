@@ -71,7 +71,7 @@ const HeroMainItem = ({ interval = 10_000 }: Props) => {
       />
       <HeroPrevNext goToPrev={goToPrev} goToNext={goToNext} />
       <Flex
-        ml={{ base: "2.5rem" }}
+        ml={{ base: "2.5rem", md: "10%", "2xl": "8%" }}
         zIndex={100}
         direction="column"
         width={{ base: "75%", md: "50%" }}
@@ -87,7 +87,7 @@ const HeroMainItem = ({ interval = 10_000 }: Props) => {
           transition={{ type: "spring", duration: 0.8, delay: 0.5 }}
           fontFamily="Arial"
           lineHeight="110%"
-          fontSize={{ base: "1.2em", md: "1.5em" }}
+          fontSize={{ base: "1.2em", md: "1.5em", "2xl": "2.5em" }}
           color="white"
           fontWeight="bold"
           mb="0.5rem"
@@ -106,7 +106,7 @@ const HeroMainItem = ({ interval = 10_000 }: Props) => {
           fontFamily="Arial"
           color="white"
           lineHeight={{ md: "115%" }}
-          fontSize={{ base: "0.7em", md: "0.8em" }}
+          fontSize={{ base: "0.7em", md: "0.8em", "2xl": "1.2em" }}
           mb={{ base: "1rem", lg: "2rem" }}
         >
           {currentService.desc}
@@ -119,14 +119,7 @@ const HeroMainItem = ({ interval = 10_000 }: Props) => {
             scale: change ? 0.9 : 1,
           }}
           transition={{ type: "spring", duration: 1, delay: 1.5 }}
-          fontWeight="bold"
-          fontSize={{ base: "0.7em", md: "0.9em", lg: "1em" }}
-          width={{ base: "140px", md: "175px" }}
-          height={{ base: "25px", md: "35px" }}
-          bg="#67AD5C"
-          borderRadius={25}
-          color="white"
-          variant="solid"
+          variant="primary"
         >
           Explore Services
         </MotionButton>

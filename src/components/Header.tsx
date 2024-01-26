@@ -9,12 +9,13 @@ const Header = () => {
     <Flex
       direction="row"
       backgroundColor="#F4F4F4"
-      paddingX={{ base: "1rem", md: "2rem", lg: "6rem" }}
+      paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
       paddingY="0.5rem"
+      border="2px solid red"
     >
       <HStack>
         <BiHeadphone size={is4kScreen ? "1.5em" : "0.8em"} color="#67AD5C" />
-        <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.5em" }}>
+        <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
           Hotline:{" "}
           <Link fontWeight="bold" color="#67AD5C">
             403-457-1217
@@ -24,14 +25,14 @@ const Header = () => {
       <Spacer />
       <HStack display={{ base: "none", md: "flex" }}>
         <RiAccountCircleLine
-          size={is4kScreen ? "1.5em" : "0.8em"}
+          size={is4kScreen ? "1.2em" : "0.7em"}
           color="#67AD5C"
         />
-        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.5em" }}>
+        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
           Sign in
         </Link>
-        <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.5em" }}> / </Text>
-        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.5em" }}>
+        <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}> / </Text>
+        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
           Sign up
         </Link>
       </HStack>

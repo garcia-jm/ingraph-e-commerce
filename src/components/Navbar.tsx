@@ -30,9 +30,9 @@ import img from "../assets/ads-and-decals.webp";
 import logo from "../assets/light-ingraph-logo.png";
 import { useState } from "react";
 const hoverStyles = {
+  flex: 0.2,
   color: "#2C3338",
-  flex: "0.5",
-  fontSize: { base: "0.8em", md: "0.9em", "2xl": "2em" },
+  fontSize: { base: "0.8em", md: "0.9em", "2xl": "1.5em" },
   transition: "color 0.3s ease",
   _hover: {
     color: "#67AD5C",
@@ -80,137 +80,130 @@ const Navbar = () => {
     borderRadius: "5px",
     _hover: { color: "#f2f2f2", bg: "#3a3b3c" },
   };
+
   const rowStyles = { width: "calc(25% - 30px)", lineHeight: "45px" };
   const handleToggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
   return (
     <Flex
+      border="2px solid blue"
       as="nav"
       alignItems="center"
       justifyContent="space-between"
-      paddingX={{ base: "1rem", md: "2rem", lg: "6rem" }}
+      paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
     >
       <Img
         draggable="false"
         cursor="pointer"
         src={logo}
-        width={{ base: "100px", md: "110px", lg: "135px" }}
+        maxWidth={{ base: "100px", md: "110px", lg: "135px" }}
       />
       <Flex
+        flex="1"
         zIndex={100}
+        px="1rem"
         position="relative"
-        py="0"
-        px="30px"
-        height="70px"
-        lineHeight="70px"
-        margin="auto"
         alignItems="center"
-        justifyContent="space-between"
-        paddingX={{ base: "1rem", md: "2rem", lg: "6rem" }}
+        justifyContent="center"
         display={{ base: "none", md: "flex" }}
         direction="row"
-        flexGrow="1"
-        mr="2rem"
+        gap="2rem"
       >
-        <Box flex="1">
-          <Button sx={hoverStyles} variant="link">
-            Home
-          </Button>
-        </Box>
-        <Box
-          flex="1"
+        <Button sx={hoverStyles} variant="link">
+          Home
+        </Button>
+        <Button
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          id="catalog-button"
+          sx={hoverStyles}
+          variant="link"
         >
-          <Button id="catalog-button" sx={hoverStyles} variant="link">
-            Catalogue
-          </Button>
-          {showMega && (
-            <Box //Mega Menu
-              left={0}
-              zIndex="100"
-              position="absolute"
+          Catalogue
+        </Button>
+        {showMega && (
+          <Box //Mega Menu
+            left={0}
+            zIndex="100"
+            position="absolute"
+          >
+            <Flex
+              bg="#f2f2f2"
+              py="25px"
+              px="20px"
+              justifyContent="space-between"
+              boxShadow="0 6px 10px rgba(0, 0, 0, 0.15)"
+              borderRadius={10}
             >
-              <Flex
-                bg="#f2f2f2"
-                py="25px"
-                px="20px"
-                justifyContent="space-between"
-                boxShadow="0 6px 10px rgba(0, 0, 0, 0.15)"
-                borderRadius={10}
-              >
-                <Box sx={rowStyles}>
-                  <Heading sx={megaMenuHeadingStyles}>
-                    Marketing Materials
-                  </Heading>
-                  <UnorderedList listStyleType="none" ml="-40px">
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Business Cards</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Flyers</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Magnets</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Stickers</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Labels</Link>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Box sx={rowStyles}>
-                  <Heading sx={megaMenuHeadingStyles}>Gallery Wrap</Heading>
-                  <UnorderedList ml="-40px" listStyleType="none">
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Gallery Wrap</Link>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Box sx={rowStyles}>
-                  <Heading sx={megaMenuHeadingStyles}>Posters</Heading>
-                  <UnorderedList ml="-40px" listStyleType="none">
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Foam Board</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Paper Posters</Link>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Box sx={rowStyles}>
-                  <Heading sx={megaMenuHeadingStyles}>Apparels</Heading>
-                  <UnorderedList ml="-40px" listStyleType="none">
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>T-shirt</Link>
-                    </ListItem>
-                    <ListItem py="0" px="20px">
-                      <Link sx={linkStyles}>Hoodies</Link>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Box sx={rowStyles}>
-                  <Image
-                    src={img}
-                    alt="image"
-                    width="100%"
-                    height="100%"
-                    objectFit="cover"
-                  />
-                </Box>
-              </Flex>
-            </Box>
-          )}
-        </Box>
+              <Box sx={rowStyles}>
+                <Heading sx={megaMenuHeadingStyles}>
+                  Marketing Materials
+                </Heading>
+                <UnorderedList listStyleType="none" ml="-40px">
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Business Cards</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Flyers</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Magnets</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Stickers</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Labels</Link>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box sx={rowStyles}>
+                <Heading sx={megaMenuHeadingStyles}>Gallery Wrap</Heading>
+                <UnorderedList ml="-40px" listStyleType="none">
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Gallery Wrap</Link>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box sx={rowStyles}>
+                <Heading sx={megaMenuHeadingStyles}>Posters</Heading>
+                <UnorderedList ml="-40px" listStyleType="none">
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Foam Board</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Paper Posters</Link>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box sx={rowStyles}>
+                <Heading sx={megaMenuHeadingStyles}>Apparels</Heading>
+                <UnorderedList ml="-40px" listStyleType="none">
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>T-shirt</Link>
+                  </ListItem>
+                  <ListItem py="0" px="20px">
+                    <Link sx={linkStyles}>Hoodies</Link>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box sx={rowStyles}>
+                <Image
+                  src={img}
+                  alt="image"
+                  width="100%"
+                  height="100%"
+                  objectFit="cover"
+                />
+              </Box>
+            </Flex>
+          </Box>
+        )}
+        <Button sx={hoverStyles} variant="link">
+          About
+        </Button>
         <Box flex="1">
-          <Button sx={hoverStyles} variant="link">
-            About
-          </Button>
-        </Box>
-        <Box flex="5">
           <InputGroup>
             <Input borderRadius="25px" placeholder="Search..." />
             <InputRightElement>

@@ -32,9 +32,9 @@ const CategoryCard = ({ title, imgUrl }: Props) => {
       <Heading
         px="10px"
         as="h2"
-        fontSize={{ base: "0.8em", lg: "2em" }}
+        fontSize={{ base: "0.8em", lg: "1.2em", xl: "1.4em", "2xl": "2em" }}
         textAlign="center"
-        mb="2rem"
+        my={{ base: "1rem", "2xl": "2rem" }}
       >
         {title}
       </Heading>

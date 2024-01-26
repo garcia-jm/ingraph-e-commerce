@@ -33,14 +33,10 @@ const Footer = () => {
           designing professional marketing materials to elevate your brand.
         </Text>
         <Button
-          fontWeight="bold"
           fontSize={{ base: "0.8em", md: "0.9em" }}
           width={{ base: "160px", md: "175px" }}
           height={{ base: "35px" }}
-          bg="#67AD5C"
-          borderRadius={25}
-          color="white"
-          variant="solid"
+          variant="primary"
         >
           Browse Services
         </Button>
