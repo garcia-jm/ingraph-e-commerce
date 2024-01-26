@@ -11,7 +11,6 @@ const Header = () => {
       backgroundColor="#F4F4F4"
       paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
       paddingY="0.5rem"
-      border="2px solid red"
     >
       <HStack>
         <BiHeadphone size={is4kScreen ? "1.5em" : "0.8em"} color="#67AD5C" />

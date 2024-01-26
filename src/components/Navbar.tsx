@@ -87,7 +87,6 @@ const Navbar = () => {
   };
   return (
     <Flex
-      border="2px solid blue"
       as="nav"
       alignItems="center"
       justifyContent="space-between"
