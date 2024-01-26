@@ -101,7 +101,7 @@ const CTA = () => {
           <Button
             key={index}
             size="sm"
-            variant="solid"
+            variant="ghost"
             colorScheme="gray"
             onClick={() => handleSlideChange(index)}
             isActive={index === currentSlide}
