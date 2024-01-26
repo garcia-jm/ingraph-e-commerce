@@ -58,8 +58,8 @@ const Footer = () => {
             Connect with us:
           </Heading>
           <HStack>
-            <FaFacebook fontSize="2em" color="#67AD5C" />
-            <FaInstagram fontSize="2em" color="#67AD5C" />
+            <FaFacebook cursor="pointer" fontSize="2em" color="#67AD5C" />
+            <FaInstagram cursor="pointer" fontSize="2em" color="#67AD5C" />
           </HStack>
         </Flex>
         <Flex flex={1} minWidth="150px" direction="column">
