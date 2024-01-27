@@ -36,7 +36,7 @@ const Header = () => {
           color="#67AD5C"
         />
         <Button fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
-          <Link to="/ingraph-e-commerce/login">Sign in</Link>
+          <Link to="/ingraph-e-commerce/signin">Sign in</Link>
         </Button>
         <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}> / </Text>
         <CLink fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
