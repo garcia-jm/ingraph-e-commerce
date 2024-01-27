@@ -1,7 +1,15 @@
-import { Flex, HStack, Link, Spacer, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  HStack,
+  Link as CLink,
+  Spacer,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 import { BiHeadphone } from "react-icons/bi";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { useMediaQuery } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [is4kScreen] = useMediaQuery("(min-width: 2560px)");
@@ -16,9 +24,9 @@ const Header = () => {
         <BiHeadphone size={is4kScreen ? "1.5em" : "0.8em"} color="#67AD5C" />
         <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
           Hotline:{" "}
-          <Link fontWeight="bold" color="#67AD5C">
+          <CLink fontWeight="bold" color="#67AD5C">
             403-457-1217
-          </Link>
+          </CLink>
         </Text>
       </HStack>
       <Spacer />
@@ -27,13 +35,13 @@ const Header = () => {
           size={is4kScreen ? "1.2em" : "0.7em"}
           color="#67AD5C"
         />
-        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
-          Sign in
-        </Link>
+        <Button fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
+          <Link to="/ingraph-e-commerce/login">Sign in</Link>
+        </Button>
         <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}> / </Text>
-        <Link fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
+        <CLink fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
           Sign up
-        </Link>
+        </CLink>
       </HStack>
     </Flex>
   );
