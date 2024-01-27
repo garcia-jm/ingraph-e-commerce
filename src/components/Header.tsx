@@ -5,6 +5,7 @@ import {
   Spacer,
   Text,
   Button,
+  Box,
 } from "@chakra-ui/react";
 import { BiHeadphone } from "react-icons/bi";
 import { RiAccountCircleLine } from "react-icons/ri";
@@ -35,13 +36,23 @@ const Header = () => {
           size={is4kScreen ? "1.2em" : "0.7em"}
           color="#67AD5C"
         />
-        <Button fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
+        <Box
+          transition="0.2s ease"
+          _hover={{ color: "#67AD5C", textDecor: "underline" }}
+          as="span"
+          fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}
+        >
           <Link to="/ingraph-e-commerce/signin">Sign in</Link>
-        </Button>
+        </Box>
         <Text fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}> / </Text>
-        <CLink fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}>
-          Sign up
-        </CLink>
+        <Box
+          transition="0.2s ease"
+          _hover={{ color: "#67AD5C", textDecor: "underline" }}
+          as="span"
+          fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}
+        >
+          <CLink>Create an account</CLink>
+        </Box>
       </HStack>
     </Flex>
   );
