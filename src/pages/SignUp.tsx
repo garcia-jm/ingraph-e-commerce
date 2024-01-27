@@ -3,7 +3,6 @@ import {
   Button,
   Divider,
   Flex,
-  HStack,
   Img,
   Input,
   InputGroup,
@@ -59,19 +58,19 @@ const SignUp = () => {
         }}
       >
         <Flex sx={buttonStyles}>
-          <Box position="absolute" left={{ base: "10%", md: "15%" }}>
+          <Box position="absolute" left={{ base: "5%", md: "15%" }}>
             <FaGoogle fontSize="1.2em" />
           </Box>
           <Text>Continue with Google</Text>
         </Flex>
         <Flex sx={buttonStyles}>
-          <Box position="absolute" left={{ base: "10%", md: "15%" }}>
+          <Box position="absolute" left={{ base: "5%", md: "15%" }}>
             <FaFacebookSquare fontSize="1.2em" />
           </Box>
           <Text>Continue with Facebook</Text>
         </Flex>
         <Flex sx={buttonStyles}>
-          <Box position="absolute" left={{ base: "10%", md: "15%" }}>
+          <Box position="absolute" left={{ base: "5%", md: "15%" }}>
             <FaApple fontSize="1.2em" />
           </Box>
           <Text>Continue with Apple</Text>

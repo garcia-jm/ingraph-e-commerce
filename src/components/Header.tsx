@@ -4,7 +4,6 @@ import {
   Link as CLink,
   Spacer,
   Text,
-  Button,
   Box,
 } from "@chakra-ui/react";
 import { BiHeadphone } from "react-icons/bi";
