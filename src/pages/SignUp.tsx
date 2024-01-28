@@ -256,7 +256,7 @@ const SignUp = () => {
             <Text>Create an account</Text>
           </Flex>
           <Text mx="auto" fontSize={{ base: "0.9em", "2xl": "1em" }}>
-            Already have an account?
+            Already have an account?{" "}
             <Box
               as="span"
               fontWeight="bold"
