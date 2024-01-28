@@ -50,7 +50,7 @@ const Header = () => {
           as="span"
           fontSize={{ base: "0.7em", xl: "1em", "2xl": "1.2em" }}
         >
-          <CLink>Create an account</CLink>
+          <Link to="/ingraph-e-commerce/signup">Create an account</Link>
         </Box>
       </HStack>
     </Flex>
