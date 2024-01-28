@@ -16,7 +16,7 @@ import logo from "../assets/light-ingraph-logo.png";
 import { FaGoogle } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 const SignIn = () => {
