@@ -1,8 +1,10 @@
 import {
+  Box,
   Button,
   Flex,
   HStack,
   Heading,
+  Icon,
   Link,
   Text,
   VStack,
@@ -58,8 +60,24 @@ const Footer = () => {
             Connect with us:
           </Heading>
           <HStack>
-            <FaFacebook cursor="pointer" fontSize="2em" color="#67AD5C" />
-            <FaInstagram cursor="pointer" fontSize="2em" color="#67AD5C" />
+            <Box
+              cursor="pointer"
+              transition="0.3s ease"
+              _hover={{ color: "#67AD5C" }}
+            >
+              <Link href="https://www.facebook.com/Ingraph" isExternal>
+                <Icon as={FaFacebook} fontSize="2em" />
+              </Link>
+            </Box>
+            <Box
+              cursor="pointer"
+              transition="0.3s ease"
+              _hover={{ color: "#67AD5C" }}
+            >
+              <Link href="https://www.instagram.com/ingraphltd/" isExternal>
+                <Icon as={FaInstagram} fontSize="2em" />
+              </Link>
+            </Box>
           </HStack>
         </Flex>
         <Flex flex={1} minWidth="150px" direction="column">

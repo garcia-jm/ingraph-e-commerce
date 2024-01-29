@@ -25,7 +25,8 @@ import {
 import { IoCartOutline } from "react-icons/io5";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
-import img from "../assets/ads-and-decals.webp";
+import imgUrl from "../assets/ads-and-decals.webp";
+import { Link as DLink } from "react-router-dom";
 
 import logo from "../assets/light-ingraph-logo.png";
 import { useState } from "react";
@@ -92,12 +93,14 @@ const Navbar = () => {
       justifyContent="space-between"
       paddingX={{ base: "1rem", md: "2rem", lg: "6rem", "2xl": "8rem" }}
     >
-      <Img
-        draggable="false"
-        cursor="pointer"
-        src={logo}
-        maxWidth={{ base: "100px", md: "110px", lg: "135px" }}
-      />
+      <DLink to="/ingraph-e-commerce/">
+        <Img
+          draggable="false"
+          cursor="pointer"
+          src={logo}
+          maxWidth={{ base: "100px", md: "110px", lg: "135px" }}
+        />
+      </DLink>
       <Flex
         flex="1"
         zIndex={100}
@@ -184,7 +187,7 @@ const Navbar = () => {
                 </Box>
                 <Box sx={rowStyles}>
                   <Image
-                    src={img}
+                    src={imgUrl}
                     alt="image"
                     width="100%"
                     height="100%"

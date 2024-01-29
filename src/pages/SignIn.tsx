@@ -18,6 +18,7 @@ import { FaApple } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const {
@@ -51,13 +52,20 @@ const SignIn = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <VStack px={{ base: "1rem", md: "" }} py="2rem">
-        <Img
-          draggable="false"
-          cursor="pointer"
-          src={logo}
-          maxWidth={{ base: "120px", md: "130px", lg: "150px", "2xl": "200px" }}
-          mb="1.5rem"
-        />
+        <Link to="/ingraph-e-commerce/">
+          <Img
+            draggable="false"
+            cursor="pointer"
+            src={logo}
+            maxWidth={{
+              base: "120px",
+              md: "130px",
+              lg: "150px",
+              "2xl": "200px",
+            }}
+            mb="1.5rem"
+          />
+        </Link>
         <Divider mb="2rem" />
         <Flex
           alignItems="flex-start"
@@ -173,7 +181,7 @@ const SignIn = () => {
             or
           </Text>
           <Flex sx={buttonStyles}>
-            <Text>Create an account</Text>
+            <Link to="/ingraph-e-commerce/signup">Create an account</Link>
           </Flex>
         </Flex>
       </VStack>

@@ -60,13 +60,20 @@ const SignUp = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <VStack px={{ base: "1rem", md: "" }} py="2rem">
-        <Img
-          draggable="false"
-          cursor="pointer"
-          src={logo}
-          maxWidth={{ base: "120px", md: "130px", lg: "150px", "2xl": "200px" }}
-          mb="1.5rem"
-        />
+        <Link to="/ingraph-e-commerce/">
+          <Img
+            draggable="false"
+            cursor="pointer"
+            src={logo}
+            maxWidth={{
+              base: "120px",
+              md: "130px",
+              lg: "150px",
+              "2xl": "200px",
+            }}
+            mb="1.5rem"
+          />
+        </Link>
         <Divider mb="2rem" />
         <Flex
           alignItems="flex-start"
