@@ -37,7 +37,7 @@ const SignIn = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const [userInfo, setUserInfo] = useState<FetchResponse | null>();
-  const [error, setError] = useState<string | null>(null);
+  // const [error, setError] = useState<string | null>(null);
   const buttonStyles = {
     borderRadius: "25px",
     py: { base: "10px", "2xl": "15px" },
