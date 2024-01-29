@@ -113,7 +113,7 @@ const Navbar = () => {
         gap="2rem"
       >
         <Button sx={hoverStyles} variant="link">
-          Home
+          <DLink to="/ingraph-e-commerce/">Home</DLink>
         </Button>
         <Box onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Button id="catalog-button" sx={hoverStyles} variant="link">

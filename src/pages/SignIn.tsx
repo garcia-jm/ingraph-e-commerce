@@ -19,6 +19,14 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios, { CanceledError } from "axios";
+
+interface FetchResponse {
+  name: string;
+  email: string;
+  picture: string;
+}
 
 const SignIn = () => {
   const {
@@ -28,7 +36,8 @@ const SignIn = () => {
   } = useForm<FieldValues>();
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
-
+  const [userInfo, setUserInfo] = useState<FetchResponse | null>();
+  const [error, setError] = useState<string | null>(null);
   const buttonStyles = {
     borderRadius: "25px",
     py: { base: "10px", "2xl": "15px" },
@@ -48,7 +57,28 @@ const SignIn = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data: FieldValues) => {
     console.log(data);
   };
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      const controller = new AbortController();
+      axios
+        .get<FetchResponse>("https://www.googleapis.com/oauth2/v3/userinfo", {
+          signal: controller.signal,
+          headers: {
+            Authorization: `Bearer ${tokenResponse.access_token}`,
+          },
+        })
+        .then((res) => {
+          setUserInfo(res.data);
+          console.log(userInfo);
+        })
+        .catch((err) => {
+          if (err instanceof CanceledError) return;
+          setError(err.message);
+        });
 
+      return () => controller.abort();
+    },
+  });
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <VStack px={{ base: "1rem", md: "" }} py="2rem">
@@ -79,7 +109,7 @@ const SignIn = () => {
             "2xl": "40%",
           }}
         >
-          <Flex sx={buttonStyles}>
+          <Flex sx={buttonStyles} onClick={() => login()}>
             <Box position="absolute" left={{ base: "5%", md: "15%" }}>
               <FaGoogle fontSize="1.2em" />
             </Box>

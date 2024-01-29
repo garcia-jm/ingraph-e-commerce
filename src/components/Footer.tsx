@@ -9,6 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { Link as DLink } from "react-router-dom";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -94,7 +95,7 @@ const Footer = () => {
           <Heading as="h2" fontSize={{ base: "1em", md: "1.5em" }} mb="1rem">
             Our Company
           </Heading>
-          <Link>Search</Link>
+          <DLink to="/ingraph-e-commerce/contact">Contact us</DLink>
           <Link>About us</Link>
           <Link>Blog</Link>
         </Flex>

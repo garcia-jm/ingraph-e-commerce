@@ -19,6 +19,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { useGoogleLogin } from "@react-oauth/google";
 
 const SignUp = () => {
   const {
@@ -36,6 +37,10 @@ const SignUp = () => {
       setShowConfirmPassword(!showConfirmPassword);
     }
   };
+
+  const signup = useGoogleLogin({
+    onSuccess: (tokenResponse) => console.log(tokenResponse),
+  });
 
   const buttonStyles = {
     borderRadius: "25px",
@@ -87,7 +92,7 @@ const SignUp = () => {
             "2xl": "40%",
           }}
         >
-          <Flex sx={buttonStyles}>
+          <Flex sx={buttonStyles} onClick={() => signup()}>
             <Box position="absolute" left={{ base: "5%", md: "15%" }}>
               <FaGoogle fontSize="1.2em" />
             </Box>
