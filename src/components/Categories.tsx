@@ -1,7 +1,15 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import data from "../constants/datas";
 import CategoryCard from "./CategoryCard";
+import { useNavigate } from "react-router-dom";
+import { Category } from "./ServiceCategoryList";
 const Categories = () => {
+  const navigate = useNavigate();
+
+  const onSelect = (category: Category) => {
+    const data = { category };
+    navigate("/ingraph-e-commerce/services", { state: data });
+  };
   return (
     <Box>
       <Heading
@@ -21,9 +29,9 @@ const Categories = () => {
       >
         {data.categories.map((category) => (
           <CategoryCard
+            onSelect={onSelect}
+            category={category}
             key={category.title}
-            title={category.title}
-            imgUrl={category.imgUrl}
           />
         ))}
       </Flex>

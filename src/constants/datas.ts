@@ -55,22 +55,92 @@ const categories = [
   {
     title: "Marketing Materials",
     imgUrl: images.marketingMaterials,
+    serviceList: [
+      {
+        name: "Business Cards",
+        price: 30,
+        imgUrl: images.businessCards2,
+        desc: "Elevate your professional image with Ingraph Limited's meticulously crafted business cards. Printed with precision, our cards exude sophistication and make a lasting impression. Choose from a variety of finishes and materials to reflect your unique style and leave a memorable mark on every introduction.",
+      },
+      {
+        name: "Flyers",
+        price: 30,
+        imgUrl: images.flyers,
+        desc: "Ignite your marketing campaigns with vibrant and impactful flyers from Ingraph Limited. Our high-quality prints ensure that your message stands out, captivating your audience and sparking interest. Whether promoting an event or showcasing your business, our flyers are designed to leave a lasting impact.",
+      },
+      {
+        name: "Magnets",
+        price: 30,
+        imgUrl: images.magnets,
+        desc: "Turn ordinary surfaces into captivating displays with Ingraph Limited's custom magnets. Ideal for promotional purposes or personalized gifts, our magnets boast exceptional print quality and durability. Transform your brand or memories into magnetic masterpieces that stick around.",
+      },
+    ],
   },
   {
     title: "Stickers/labels",
     imgUrl: images.adsAndDecals,
+    serviceList: [
+      {
+        name: "Stickers",
+        price: 30,
+        imgUrl: images.stickers,
+        desc: "Make a statement with Ingraph Limited's premium stickers. Crafted with precision and attention to detail, our stickers are perfect for branding, labeling, or expressing creativity. From product packaging to personalizing items, our stickers add a touch of uniqueness to every surface.",
+      },
+      {
+        name: "Labels",
+        price: 30,
+        imgUrl: images.labels,
+        desc: "Ingraph Limited offers a comprehensive range of labels tailored to meet your exact needs. Our precision printing ensures clear and professional labels suitable for packaging, branding, or organization. Elevate your products or streamline your workspace with our top-notch label solutions.",
+      },
+    ],
   },
   {
     title: "Gallery Wrap",
     imgUrl: images.galleryWrap,
+    serviceList: [
+      {
+        name: "Gallery Wrap",
+        price: 30,
+        imgUrl: images.galleryWrap2,
+        desc: "Transform your favorite images into stunning art pieces with Ingraph Limited's gallery wrap prints. Our expertly crafted canvases bring depth and vibrancy to your photos, turning memories into captivating visual stories. Showcase your moments with elegance and style.",
+      },
+    ],
   },
   {
     title: "Posters",
     imgUrl: images.posters2,
+    serviceList: [
+      {
+        name: "Foam Board",
+        price: 30,
+        imgUrl: images.foamBoard,
+        desc: "Ingraph Limited's foam board prints combine durability with visual appeal. Perfect for presentations, signage, or displays, our foam boards are lightweight yet sturdy, providing a polished look for your content. Make a lasting impression with our high-quality foam board prints.",
+      },
+      {
+        name: "Paper Posters",
+        price: 30,
+        imgUrl: images.posters2,
+        desc: "Capture attention with Ingraph Limited's vibrant paper posters. Whether for events, promotions, or decor, our posters showcase your content in brilliant color and detail. Choose from a variety of sizes and finishes to make a bold statement that demands attention.",
+      },
+    ],
   },
   {
     title: "Apparels",
     imgUrl: images.apparels,
+    serviceList: [
+      {
+        name: "T-shirts",
+        price: 30,
+        imgUrl: images.tShirt2,
+        desc: "Wear your identity with pride through Ingraph Limited's custom-printed T-shirts. Our high-quality fabric and precision printing ensure comfort and style. From promoting your brand to creating personalized apparel, our T-shirts let you make a statement effortlessly.",
+      },
+      {
+        name: "Hoodies",
+        price: 30,
+        imgUrl: images.hoodies,
+        desc: "Embrace comfort and warmth with Ingraph Limited's personalized hoodies. Crafted with attention to detail, our hoodies combine style and functionality. Perfect for team events, promotions, or personal use, our hoodies are a cozy canvas for your unique designs.",
+      },
+    ],
   },
 ];
 

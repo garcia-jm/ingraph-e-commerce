@@ -13,3 +13,7 @@ export { default as ContactPageHeader } from "./ContactPageHeader";
 export { default as ContactSubmissionForm } from "./ContactSubmissionForm";
 export { default as ContactDetails } from "./ContactDetails";
 export { default as ContactPageMap } from "./ContactPageMap";
+
+// Service page imports
+export { default as ServiceCategoryList } from "./ServiceCategoryList";
+export { default as ServiceListProducts } from "./ServiceListProducts";
