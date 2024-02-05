@@ -4,7 +4,7 @@ const heroItems = [
   {
     title: "Get perfect prints delivered to your business",
     desc: "Make your business stand out from the crowd with our professional and eye-catching signs and prints.",
-    imgUrl: images.constructionHoardingSign,
+    imgUrl: images.woman,
     linkTo: "",
   },
   {

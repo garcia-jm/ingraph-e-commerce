@@ -26,6 +26,7 @@ import labels from "../assets/labels.jpg";
 import foamBoard from "../assets/foam-board.jpg";
 import tShirt2 from "../assets/t-shirt-2.jpg";
 import hoodies from "../assets/hoodies.jpg";
+import woman from "../assets/woman-giving-a-thumbs-up.webp";
 
 export default {
   constructionHoardingSign,
@@ -56,4 +57,5 @@ export default {
   foamBoard,
   tShirt2,
   hoodies,
+  woman,
 };
